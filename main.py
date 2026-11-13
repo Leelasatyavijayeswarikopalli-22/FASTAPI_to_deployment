@@ -36,5 +36,5 @@ def create_posts(Post:post):
     return {"data":Post_dict}
 
 @app.get("/posts/{id}")
-def get_post(id):
+def get_post(id : int):                      #here you can declare the type so that the id in the path can be converted to an int
     return {"post id":find_post(int(id))}
